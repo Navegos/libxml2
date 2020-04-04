@@ -125,3 +125,7 @@ xstc/Makefile
 xstc/Makefile.in
 xstc/Tests
 xstc/xsts-*.tar.gz
+
+.vs
+intermediate/
+output/

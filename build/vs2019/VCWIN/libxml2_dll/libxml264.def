@@ -1,0 +1,22 @@
+LIBRARY
+; GNU LIBICONV - character set conversion library. https://www.gnu.org/software/libiconv/
+
+VERSION       1.16
+
+EXPORTS
+        _libiconv_version
+        libiconv_open
+        libiconv
+        libiconv_close
+        libiconv_open_into
+        libiconvctl
+        libiconvlist
+        iconv_canonicalize
+        libiconv_set_relocation_prefix
+
+        libiconv_locale_charset
+
+        libiconv_set_relocation_prefix
+        libiconv_relocate
+        libiconv_relocate2
+        ;libiconv_compute_curr_prefix

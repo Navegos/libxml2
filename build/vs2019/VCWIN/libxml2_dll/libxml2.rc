@@ -1,0 +1,41 @@
+#include <winver.h>
+
+#define PACKAGE_VERSION_MAJOR 2
+#define PACKAGE_VERSION_MINOR 9
+#define PACKAGE_VERSION_SUBMINOR 11
+#define PACKAGE_VERSION_STRING "2.9.11"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION PACKAGE_VERSION_MAJOR,PACKAGE_VERSION_MINOR,PACKAGE_VERSION_SUBMINOR,0
+ PRODUCTVERSION PACKAGE_VERSION_MAJOR,PACKAGE_VERSION_MINOR,PACKAGE_VERSION_SUBMINOR,0
+ FILEFLAGSMASK 0x3fL /* VS_FFI_FILEFLAGSMASK */
+#ifdef _DEBUG
+ FILEFLAGS 0x1L  /* VS_FF_DEBUG */
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x10004L  /* VOS_DOS_WINDOWS32 */
+ FILETYPE 0x2L  /* VFT_DLL */
+ FILESUBTYPE 0x0L  /* VFT2_UNKNOWN */
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "04090000"  /* Lang = US English, Charset = ASCII */
+        BEGIN
+            VALUE "Comments", "For more information visit http://xmlsoft.org/\0"
+            VALUE "CompanyName", "Free Software Foundation\0"
+            VALUE "FileDescription", "libxml2 library\0"
+            VALUE "FileVersion", PACKAGE_VERSION_STRING "\0"
+            VALUE "InternalName", "libxml2.dll\0"
+            VALUE "LegalCopyright", "Copyright (C) Daniel Veillard\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "libxml2.dll\0"
+            VALUE "ProductName", "libxml2\0"
+            VALUE "ProductVersion", PACKAGE_VERSION_STRING "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0  /* US English, ASCII */
+    END
+END
