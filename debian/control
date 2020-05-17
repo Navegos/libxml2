@@ -7,25 +7,22 @@ Uploaders:
  YunQiang Su <wzssyqa@gmail.com>,
 Build-Depends:
  debhelper-compat (= 12),
-# dh_python2 (but not dh_python3) doesn't generate proper dependencies if this
-# is not in B-D (even if it's in B-D-A).  Just leave it here for now, will remove
-# together with pyhon2…
- dh-python <!nopython>,
+ dh-python,
 Build-Depends-Indep:
  pkg-config,
 Build-Depends-Arch:
- dh-python <!nopython>,
+ dh-python,
  libicu-dev,
  liblzma-dev,
- libpython-all-dbg <!nopython>,
- libpython-all-dev <!nopython>,
- libpython3-all-dbg <!nopython>,
- libpython3-all-dev <!nopython>,
+ libpython-all-dbg,
+ libpython-all-dev,
+ libpython3-all-dbg,
+ libpython3-all-dev,
  pkg-config,
- python-all-dbg:any <!nopython>,
- python-all-dev:any (>= 2.7.5-5~) <!nopython>,
- python3-all-dbg:any <!nopython>,
- python3-all-dev:any (>= 3.5) <!nopython>,
+ python-all-dbg:any,
+ python-all-dev:any (>= 2.7.5-5~),
+ python3-all-dbg:any,
+ python3-all-dev:any (>= 3.5),
  rename,
  zlib1g-dev | libz-dev,
 Standards-Version: 4.5.0
@@ -114,7 +111,7 @@ Description: Documentation for the GNOME XML library
 
 Package: python-libxml2
 Architecture: any
-Build-Profiles: <!nopython>
+Build-Profiles:
 Section: python
 Depends:
  ${misc:Depends},
@@ -133,7 +130,7 @@ Description: Python bindings for the GNOME XML library
 
 Package: python-libxml2-dbg
 Architecture: any
-Build-Profiles: <!nopython>
+Build-Profiles:
 Section: debug
 Depends:
  python-libxml2 (= ${binary:Version}),
@@ -153,7 +150,7 @@ Description: Python bindings for the GNOME XML library (debug extension)
 
 Package: python3-libxml2
 Architecture: any
-Build-Profiles: <!nopython>
+Build-Profiles:
 Section: python
 Multi-Arch: same
 Depends:
@@ -173,7 +170,7 @@ Description: Python3 bindings for the GNOME XML library
 
 Package: python3-libxml2-dbg
 Architecture: any
-Build-Profiles: <!nopython>
+Build-Profiles:
 Section: debug
 Multi-Arch: same
 Depends:
