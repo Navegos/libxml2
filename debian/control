@@ -86,25 +86,6 @@ Description: Development files for the GNOME XML library
  Install this package if you wish to develop your own programs using
  the GNOME XML library.
 
-Package: libxml2-doc
-Architecture: all
-Section: doc
-Depends:
- ${misc:Depends},
-Suggests:
- devhelp,
-Multi-Arch: foreign
-Description: Documentation for the GNOME XML library
- XML is a metalanguage to let you design your own markup language.
- A regular markup language defines a way to describe information in
- a certain class of documents (eg HTML). XML lets you define your
- own customized markup languages for many classes of document. It
- can do this because it's written in SGML, the international standard
- metalanguage for markup languages.
- .
- This package contains general information about the GNOME XML library
- and more specific API references.
-
 Package: python3-libxml2
 Architecture: any
 Section: python

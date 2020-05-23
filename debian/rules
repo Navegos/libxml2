@@ -77,15 +77,6 @@ doinstall-python%-dbg:
 doinstall-python%:
 	dh_auto_install --builddirectory=builddir/main/python$(*)
 
-override_dh_installdocs:
-	# Ignore Policy v3.9.7 §12.3 for now
-	dh_installdocs --doc-main-package=libxml2-doc -p libxml2-doc
-	dh_installdocs --remaining-packages
-override_dh_installexamples:
-	# Ignore Policy v3.9.7 §12.3 for now
-	dh_installexamples --doc-main-package=libxml2-doc -p libxml2-doc
-	dh_installexamples --remaining-packages
-
 override_dh_compress:
 	dh_compress -Xexamples/ -Xtutorial/ -Xhtml/ -X.html
 
