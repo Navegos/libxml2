@@ -1,6 +1,6 @@
 libxml2 (2.9.11-1ubuntu2) focal; urgency=medium
 
-  * Sync, latest commit a230b72, and ubuntu patches.
+  * Sync, latest mainline changes a230b72, and ubuntu 20.04 patches.
 
  -- Navegos QA <navegos@outlook.com>  Sat, 16 May 2020 2:17:14 +0000
 
