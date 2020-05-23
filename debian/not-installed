@@ -68,6 +68,10 @@ usr/share/doc/libxml2-2.9.10/html/tutorial/apd.html
 usr/share/doc/libxml2-2.9.10/html/tutorial/apc.html
 usr/share/doc/libxml2-2.9.10/html/tutorial/apb.html
 usr/share/doc/libxml2-2.9.10/html/tutorial/apa.html
+usr/share/doc/libxml2-2.9.10/html/tutorial/customfo.xsl
+usr/share/doc/libxml2-2.9.10/html/tutorial/includestory.xml
+usr/share/doc/libxml2-2.9.10/html/tutorial/xmltutorial.xml
+usr/share/doc/libxml2-2.9.10/html/tutorial/customhtml.xsl
 usr/share/doc/libxml2-2.9.10/html/tutorial/images/warning.png
 usr/share/doc/libxml2-2.9.10/html/tutorial/images/up.png
 usr/share/doc/libxml2-2.9.10/html/tutorial/images/toc-plus.png
