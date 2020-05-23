@@ -3,12 +3,6 @@ export DH_VERBOSE=1
 
 DOPACKAGES = $(shell dh_listpackages)
 
-ifneq (,$(filter python-libxml2 python-libxml2-dbg,$(DOPACKAGES)))
-# The versions of python currently supported
-PYVERS=$(shell pyversions -s)
-else
-PYVERS=
-endif
 ifneq (,$(filter python3-libxml2 python3-libxml2-dbg,$(DOPACKAGES)))
 # The versions of python3 currently supported
 PY3VERS=$(shell py3versions -s)
@@ -99,19 +93,13 @@ override_dh_installchangelogs:
 	dh_installchangelogs -k NEWS
 
 override_dh_install-arch:
-	dh_install -Npython-libxml2-dbg -Npython3-libxml2-dbg
-ifneq (,$(filter python-libxml2-dbg,$(DOPACKAGES)))
-	dh_install -ppython-libxml2-dbg --sourcedir=debian/tmp-dbg
-endif
+	dh_install -Npython3-libxml2-dbg
 ifneq (,$(filter python3-libxml2-dbg,$(DOPACKAGES)))
 	dh_install -ppython3-libxml2-dbg --sourcedir=debian/tmp-dbg
 endif
 	sed -i -e 's,/lib/$(DEB_HOST_MULTIARCH),/lib,' debian/libxml2-dev/usr/bin/xml2-config
 
 override_dh_strip:
-ifneq (,$(filter python-libxml2 python-libxml2-dbg,$(DOPACKAGES)))
-	dh_strip -ppython-libxml2 --dbg-package=python-libxml2-dbg
-endif
 ifneq (,$(filter python3-libxml2 python3-libxml2-dbg,$(DOPACKAGES)))
 	dh_strip -ppython3-libxml2 --dbg-package=python3-libxml2-dbg
 endif
@@ -129,7 +117,6 @@ clean build-indep binary-indep:
 
 build-arch binary-arch:
 	dh $@ \
-		$(if $(filter python-libxml2 python-libxml2-dbg,$(DOPACKAGES)),--with python2) \
 		$(if $(filter python3-libxml2 python3-libxml2-dbg,$(DOPACKAGES)),--with python3)
 
 build: build-arch build-indep
