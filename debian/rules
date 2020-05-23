@@ -116,8 +116,7 @@ clean build-indep binary-indep:
 	dh $@
 
 build-arch binary-arch:
-	dh $@ \
-		$(if $(filter python3-libxml2 python3-libxml2-dbg,$(DOPACKAGES)),--with python3)
+	dh $@ $(if $(filter python3-libxml2 python3-libxml2-dbg,$(DOPACKAGES)),--with python3)
 
 build: build-arch build-indep
 binary: binary-arch binary-indep
